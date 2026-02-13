@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    @apply bg-ink text-white;
+  }
+
+  body {
+    @apply bg-bg text-ink font-sans;
+  }
+}
+
+@layer components {
+  .micro-label {
+    @apply text-micro uppercase text-ink-muted;
+  }
+
+  .section-border {
+    @apply border-t border-border;
+  }
+
+  .link-underline {
+    @apply underline underline-offset-4 decoration-border hover:decoration-ink transition-colors duration-300;
+  }
+}
